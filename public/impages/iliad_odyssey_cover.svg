@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1060" width="800" height="1060" style="background:#1d5a86; font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', 'Noto Sans KR', sans-serif;">
+  <defs>
+    <!-- Ocean Gradient Background -->
+    <linearGradient id="oceanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4C7896" />
+      <stop offset="18%" stop-color="#3B6785" />
+      <stop offset="38%" stop-color="#2D5877" />
+      <stop offset="60%" stop-color="#1E4B6C" />
+      <stop offset="80%" stop-color="#144163" />
+      <stop offset="100%" stop-color="#0B3454" />
+    </linearGradient>
+
+    <!-- Water Ripples Filter -->
+    <linearGradient id="waveHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.03" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03" />
+    </linearGradient>
+
+    <!-- Book Drop Shadow -->
+    <filter id="bookShadow" x="-15%" y="-10%" width="130%" height="135%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#051824" flood-opacity="0.55" />
+    </filter>
+
+    <filter id="pillShadow" x="-10%" y="-20%" width="120%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#051824" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Deep Ocean Base -->
+  <rect width="800" height="1060" fill="url(#oceanGrad)" />
+
+  <!-- Water Surface Ripple Bands -->
+  <g opacity="0.6">
+    <ellipse cx="400" cy="560" rx="460" ry="14" fill="url(#waveHighlight)" />
+    <ellipse cx="380" cy="620" rx="440" ry="12" fill="url(#waveHighlight)" />
+    <ellipse cx="420" cy="680" rx="470" ry="16" fill="url(#waveHighlight)" />
+    <ellipse cx="390" cy="740" rx="430" ry="13" fill="url(#waveHighlight)" />
+    <ellipse cx="410" cy="800" rx="460" ry="15" fill="url(#waveHighlight)" />
+    <ellipse cx="400" cy="860" rx="480" ry="18" fill="url(#waveHighlight)" />
+    <ellipse cx="380" cy="920" rx="450" ry="16" fill="url(#waveHighlight)" />
+    <ellipse cx="420" cy="980" rx="470" ry="19" fill="url(#waveHighlight)" />
+  </g>
+
+  <!-- Top Left Badge: 2029년 5월 -->
+  <g transform="translate(105, 75)">
+    <rect x="0" y="0" width="140" height="42" rx="21" fill="#4B6E87" fill-opacity="0.4" stroke="#315269" stroke-width="2" />
+    <text x="70" y="27" font-size="18" font-weight="700" fill="#244458" text-anchor="middle" letter-spacing="0.5">2029년 5월</text>
+  </g>
+
+  <!-- Top Right Badge: 초등 저학년 추천도서 -->
+  <g transform="translate(535, 75)">
+    <rect x="0" y="0" width="160" height="42" rx="21" fill="#4A5847" filter="url(#pillShadow)" />
+    <text x="80" y="27" font-size="17" font-weight="700" fill="#EDF3E8" text-anchor="middle" letter-spacing="0.5">초등 저학년 추천도서</text>
+  </g>
+
+  <!-- Main Title: 아·볼·로 북클럽 -->
+  <!-- Crisp, bold, rounded Korean letterforms -->
+  <g transform="translate(400, 205)">
+    <!-- Soft shadow for text -->
+    <text x="0" y="4" font-size="64" font-weight="900" fill="#0C2B40" fill-opacity="0.3" text-anchor="middle" letter-spacing="-1">아·볼·로 북클럽</text>
+    <text x="0" y="0" font-size="64" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="-1">아·볼·로 북클럽</text>
+  </g>
+
+  <!-- Subtitle Paragraph -->
+  <g transform="translate(400, 290)">
+    <text x="0" y="0" font-size="21" font-weight="600" fill="#182E3E" text-anchor="middle" letter-spacing="-0.3">내용은 알아도 혼자는 영영 읽지 못할 책의 대표,</text>
+    <text x="0" y="32" font-size="21" font-weight="600" fill="#182E3E" text-anchor="middle" letter-spacing="-0.3">일리아스 오디세이아가 우리 앞에 와 있습니다.</text>
+  </g>
+
+  <!-- Center: Two Book Covers -->
+  <!-- Left Book: 오디세이아 (Odyssey) -->
+  <g transform="translate(225, 395)" filter="url(#bookShadow)">
+    <!-- Book Background Container -->
+    <rect x="0" y="0" width="165" height="235" rx="3" fill="#FFFFFF" />
+    
+    <!-- Top Spine Header -->
+    <rect x="0" y="0" width="165" height="52" fill="#FFFFFF" />
+    <text x="12" y="15" font-size="7" font-weight="500" fill="#71717A">돋을새김 푸른책장 시리즈 10</text>
+    <text x="12" y="23" font-size="6.5" font-weight="500" fill="#E08320">지혜와 모험, 그 두 이상의 이야기</text>
+    <text x="153" y="15" font-size="6.5" font-weight="500" fill="#52525B" text-anchor="end">호메로스 지음</text>
+    <text x="153" y="23" font-size="6.5" font-weight="500" fill="#52525B" text-anchor="end">임명현 편역</text>
+    
+    <text x="12" y="42" font-size="16" font-weight="800" fill="#222222" letter-spacing="-0.5">오디세이아</text>
+    <text x="96" y="42" font-size="10.5" font-style="italic" fill="#888888">Odysseia</text>
+
+    <!-- Book Painting Area: Ulysses and the Sirens -->
+    <g transform="translate(12, 52)">
+      <rect width="141" height="173" fill="#8C664A" />
+      <!-- Stylized Painting Backdrop -->
+      <linearGradient id="sirensSky" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#4F718B" />
+        <stop offset="50%" stop-color="#9A826B" />
+        <stop offset="100%" stop-color="#2D4350" />
+      </linearGradient>
+      <rect width="141" height="173" fill="url(#sirensSky)" />
+      <!-- Ancient Greek Galley Ship Deck -->
+      <polygon points="10,130 131,110 131,173 10,173" fill="#422919" />
+      <polygon points="20,115 125,95 131,110 10,130" fill="#6B4328" />
+      <!-- Mast & Ropes -->
+      <line x1="68" y1="20" x2="68" y2="150" stroke="#26170E" stroke-width="4.5" />
+      <line x1="68" y1="35" x2="10" y2="140" stroke="#26170E" stroke-width="1.2" opacity="0.6" />
+      <line x1="68" y1="35" x2="130" y2="125" stroke="#26170E" stroke-width="1.2" opacity="0.6" />
+      <!-- Odysseus tied to mast -->
+      <rect x="63" y="70" width="10" height="42" rx="3" fill="#E8D1B5" />
+      <rect x="61" y="90" width="14" height="24" fill="#FFFFFF" />
+      <!-- Winged Sirens hovering -->
+      <ellipse cx="35" cy="55" rx="14" ry="9" fill="#2E1C16" />
+      <circle cx="38" cy="46" r="4.5" fill="#E0C4AA" />
+      <ellipse cx="112" cy="62" rx="15" ry="9" fill="#2E1C16" />
+      <circle cx="108" cy="53" r="4.5" fill="#E0C4AA" />
+      <ellipse cx="50" cy="85" rx="12" ry="7" fill="#241510" />
+      <!-- Oars in the dark water -->
+      <line x1="30" y1="140" x2="10" y2="170" stroke="#7A4E30" stroke-width="2.5" />
+      <line x1="60" y1="135" x2="40" y2="170" stroke="#7A4E30" stroke-width="2.5" />
+      <line x1="90" y1="130" x2="70" y2="170" stroke="#7A4E30" stroke-width="2.5" />
+    </g>
+
+    <!-- Subtle Spine highlight -->
+    <rect x="0" y="0" width="5" height="235" fill="#000000" opacity="0.08" />
+  </g>
+
+  <!-- Right Book: 일리아스 (Ilias) -->
+  <g transform="translate(410, 395)" filter="url(#bookShadow)">
+    <!-- Book Background Container -->
+    <rect x="0" y="0" width="165" height="235" rx="3" fill="#FFFFFF" />
+    
+    <!-- Top Spine Header -->
+    <rect x="0" y="0" width="165" height="52" fill="#FFFFFF" />
+    <text x="12" y="15" font-size="7" font-weight="500" fill="#71717A">돋을새김 푸른책장 시리즈 9</text>
+    <text x="12" y="23" font-size="6.5" font-weight="500" fill="#E08320">신화와 역사의 보물창고</text>
+    <text x="153" y="15" font-size="6.5" font-weight="500" fill="#52525B" text-anchor="end">호메로스 지음</text>
+    <text x="153" y="23" font-size="6.5" font-weight="500" fill="#52525B" text-anchor="end">임명현 편역</text>
+    
+    <text x="12" y="42" font-size="16" font-weight="800" fill="#222222" letter-spacing="-0.5">일리아스</text>
+    <text x="76" y="42" font-size="10.5" font-style="italic" fill="#888888">Ilias</text>
+
+    <!-- Book Painting Area: Priam pleading with Achilles -->
+    <g transform="translate(12, 52)">
+      <rect width="141" height="173" fill="#2E231C" />
+      <!-- Tent Interior Backdrop -->
+      <linearGradient id="tentBack" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#2D3B47" />
+        <stop offset="60%" stop-color="#4F3C2C" />
+        <stop offset="100%" stop-color="#1E140C" />
+      </linearGradient>
+      <rect width="141" height="173" fill="url(#tentBack)" />
+      
+      <!-- Achilles in vibrant red mantle -->
+      <!-- Helmet / Column in background -->
+      <rect x="110" y="40" width="16" height="50" fill="#B38957" opacity="0.6" />
+      <!-- Seated Achilles figure -->
+      <path d="M 85,75 C 95,75 110,85 115,105 C 118,120 115,145 105,160 L 80,160 Z" fill="#9C271D" />
+      <circle cx="95" cy="65" r="7" fill="#ECCAB2" />
+      <!-- Achilles bare muscular torso -->
+      <path d="M 88,72 L 98,72 L 95,95 L 85,92 Z" fill="#ECCAB2" />
+      
+      <!-- Priam kneeling in yellow/gold robes kissing hand -->
+      <path d="M 40,110 C 50,98 62,100 75,108 L 80,135 C 75,155 45,162 35,162 Z" fill="#CCA84B" />
+      <circle cx="58" cy="95" r="6" fill="#D4B097" />
+      <!-- White beard / elder hair -->
+      <path d="M 54,95 C 52,102 60,105 62,102 Z" fill="#FFFFFF" />
+
+      <!-- Attendant standing in background shadow -->
+      <rect x="22" y="80" width="10" height="45" fill="#2B3C4B" opacity="0.7" />
+      <circle cx="27" cy="74" r="4.5" fill="#BFA38E" />
+    </g>
+
+    <!-- Subtle Spine highlight -->
+    <rect x="0" y="0" width="5" height="235" fill="#000000" opacity="0.08" />
+  </g>
+
+  <!-- Center Sailboat Icon / Illustration -->
+  <g transform="translate(380, 645)">
+    <!-- Sailboat reflection in water -->
+    <g opacity="0.35" transform="scale(1, -0.4) translate(0, -75)">
+      <polygon points="12,18 20,48 4,48" fill="#FFFFFF" />
+      <polygon points="23,8 36,48 23,48" fill="#FFFFFF" />
+      <polygon points="0,50 40,50 34,58 6,58" fill="#FFFFFF" />
+    </g>
+    <!-- White Paper/Classic Sailboat -->
+    <!-- Mainsail -->
+    <polygon points="19,10 38,48 20,48" fill="#FFFFFF" filter="url(#pillShadow)" />
+    <!-- Jib sail -->
+    <polygon points="17,18 17,48 3,48" fill="#FFFFFF" opacity="0.95" filter="url(#pillShadow)" />
+    <!-- Mast -->
+    <line x1="18.5" y1="8" x2="18.5" y2="49" stroke="#E2E8F0" stroke-width="1.2" />
+    <!-- Hull -->
+    <polygon points="0,50 40,50 33,59 7,59" fill="#FFFFFF" filter="url(#pillShadow)" />
+  </g>
+
+  <!-- Bottom Details -->
+  <!-- "책 제목 | 저자" -->
+  <text x="400" y="770" font-size="20" font-weight="700" fill="#214258" text-anchor="middle" letter-spacing="-0.3">책 제목 | 저자</text>
+  
+  <!-- "출판사" -->
+  <text x="400" y="802" font-size="18" font-weight="600" fill="#214258" text-anchor="middle" letter-spacing="-0.3">출판사</text>
+
+  <!-- Bottom Translucent Pill Container -->
+  <g transform="translate(118, 830)">
+    <rect x="0" y="0" width="564" height="82" rx="41" fill="#C9DCE8" fill-opacity="0.82" stroke="#FFFFFF" stroke-width="1.5" filter="url(#pillShadow)" />
+    <text x="282" y="47" font-size="17" font-weight="700" fill="#1C3F58" text-anchor="middle" letter-spacing="0.2">『일리아스 &amp; 오디세이아』 (호메로스 원작, 임명현 편역, 돋을새김)</text>
+  </g>
+</svg>

@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-handwriting: "Caveat", cursive;
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-paper: #FBF9F4;
+  --color-subtle: #F4F0E6;
+  --color-border-line: #E8E4DA;
+  --color-dark-ink: #1D1D1D;
+  --color-body-ink: #4A4A48;
+  --color-point-green: #3B5E43;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FBF9F4;
+  color: #4A4A48;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
+  word-break: keep-all;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Kyobo Handwriting 2022 Kim Hye-nam (교보손글씨 2022 김혜남) */
+@font-face {
+  font-family: 'KyoboHandwriting2022khn';
+  src: url('/fonts/KyoboHandwriting2022khn.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/fontbee/font@main/Kyobo/KyoboHandwriting2022khn.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* KoPubWorld Batang (KoPub 바탕체) */
+@font-face {
+  font-family: 'KoPubWorld Batang';
+  font-style: normal;
+  font-weight: 400;
+  src: local('KoPubWorldBatang'),
+       url('https://cdn.jsdelivr.net/npm/font-kopubworld@1.0/fonts/KoPubWorld-Batang-Medium.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KoPubWorld Batang';
+  font-style: normal;
+  font-weight: 700;
+  src: local('KoPubWorldBatang'),
+       url('https://cdn.jsdelivr.net/npm/font-kopubworld@1.0/fonts/KoPubWorld-Batang-Bold.woff2') format('woff2');
+  font-display: swap;
+}
+
+.font-kopub {
+  font-family: 'KoPubWorld Batang', 'KoPub Batang', 'Batang', serif;
+}
+
+.font-kyobo {
+  font-family: 'KyoboHandwriting2022khn', cursive, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-cormorant {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.font-caveat {
+  font-family: "Caveat", cursive;
+}
+
+/* Book Page-Turn 3D Transition Animations */
+@keyframes bookPageTurnOut {
+  0% {
+    transform: perspective(1800px) rotateY(0deg) translateX(0);
+    transform-origin: right center;
+    opacity: 1;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  50% {
+    box-shadow: -30px 0 50px rgba(0, 0, 0, 0.28);
+    opacity: 0.85;
+  }
+  100% {
+    transform: perspective(1800px) rotateY(-65deg) translateX(-60px);
+    transform-origin: right center;
+    opacity: 0;
+    box-shadow: -60px 0 80px rgba(0, 0, 0, 0.35);
+  }
+}
+
+@keyframes bookPageTurnIn {
+  0% {
+    transform: perspective(1800px) rotateY(65deg) translateX(60px);
+    transform-origin: left center;
+    opacity: 0;
+    box-shadow: 60px 0 80px rgba(0, 0, 0, 0.25);
+  }
+  50% {
+    box-shadow: 25px 0 40px rgba(0, 0, 0, 0.15);
+    opacity: 0.9;
+  }
+  100% {
+    transform: perspective(1800px) rotateY(0deg) translateX(0);
+    transform-origin: left center;
+    opacity: 1;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.book-page-turning-out {
+  animation: bookPageTurnOut 0.28s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  pointer-events: none;
+}
+
+.book-page-turning-in {
+  animation: bookPageTurnIn 0.32s cubic-bezier(0, 0, 0.2, 1) forwards;
+}
+
+/* Book Spine subtle gradient during page turn */
+@keyframes bookSpineSheen {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.book-spine-sheen {
+  animation: bookSpineSheen 0.5s ease-in-out forwards;
+}
+
+/* Hero Section Subtle Entrance Animations */
+@keyframes heroSoftFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-fade {
+  animation: heroSoftFadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes heroBgFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-hero-bg {
+  animation: heroBgFadeIn 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
