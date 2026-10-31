@@ -10,7 +10,7 @@ import { NavPage } from '../components/Navbar';
 import ScrollReveal from '../components/ScrollReveal';
 
 interface HomePageProps {
-  onSelectProgram: (p: Program) => void;
+  onSelectProgram?: (p: Program) => void;
   onOpenAboutModal: () => void;
   onNavigateToAbout: () => void;
   onNavigate?: (page: NavPage, usePageTurn?: boolean) => void;

@@ -12,17 +12,14 @@ import ActionPage from './pages/ActionPage';
 import AboutPage from './pages/AboutPage';
 import BokyeonPage from './pages/BokyeonPage';
 import DonatePage from './pages/DonatePage';
-import ProgramModal from './components/ProgramModal';
 import RecruitingProgramModal from './components/RecruitingProgramModal';
 import AboutModal from './components/AboutModal';
 import InquiryModal from './components/InquiryModal';
 import Toast from './components/Toast';
-import { Program } from './data/programsData';
 import { RecruitingProgram } from './data/recruitingProgramsData';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<NavPage>('home');
-  const [selectedProgram, setSelectedProgram] = useState<Program | null>(null);
   const [selectedRecruitingProgram, setSelectedRecruitingProgram] = useState<RecruitingProgram | null>(null);
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
   const [isInquiryModalOpen, setIsInquiryModalOpen] = useState(false);
@@ -81,7 +78,6 @@ export default function App() {
         {/* 1. 홈 메인화면 (Hero + Statement + Programs) */}
         {currentPage === 'home' && (
           <HomePage
-            onSelectProgram={(p) => setSelectedProgram(p)}
             onOpenAboutModal={() => setIsAboutModalOpen(true)}
             onNavigateToAbout={() => handleNavigate('about')}
             onNavigate={handleNavigate}
@@ -93,7 +89,6 @@ export default function App() {
         {currentPage === 'learning' && (
           <LearningPage
             onApplyOrInquire={handleApplyOrInquire}
-            onSelectProgram={(p) => setSelectedProgram(p)}
             onSelectRecruitingProgram={(p) => setSelectedRecruitingProgram(p)}
           />
         )}
@@ -102,7 +97,6 @@ export default function App() {
         {currentPage === 'action' && (
           <ActionPage
             onApplyOrInquire={handleApplyOrInquire}
-            onSelectProgram={(p) => setSelectedProgram(p)}
             onNotify={notify}
           />
         )}
@@ -128,13 +122,6 @@ export default function App() {
 
       {/* Persistent Footer */}
       <Footer onNavigate={handleNavigate} />
-
-      {/* Program Detail Modal */}
-      <ProgramModal
-        program={selectedProgram}
-        onClose={() => setSelectedProgram(null)}
-        onApplyOrInquire={handleApplyOrInquire}
-      />
 
       {/* Recruiting Program Detail Modal */}
       <RecruitingProgramModal

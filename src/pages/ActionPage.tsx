@@ -4,11 +4,11 @@ import ScrollReveal from '../components/ScrollReveal';
 
 interface ActionPageProps {
   onApplyOrInquire?: (programTitle: string) => void;
-  onSelectProgram: (p: Program) => void;
+  onSelectProgram?: (p: Program) => void;
   onNotify?: (msg: string) => void;
 }
 
-export default function ActionPage({ onSelectProgram }: ActionPageProps) {
+export default function ActionPage({}: ActionPageProps) {
   const actionPrograms = PROGRAMS.filter((p) => p.trackType === 'action');
 
   return (
@@ -29,19 +29,18 @@ export default function ActionPage({ onSelectProgram }: ActionPageProps) {
           </div>
         </ScrollReveal>
 
-        {/* 3-Column Simple Cards (더 알아보기 삭제 완료) */}
+        {/* 3-Column Simple Cards (클릭 반응 및 팝업 없음, 단순 정보 카드) */}
         <ScrollReveal duration={2000}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-7 items-stretch">
             {actionPrograms.map((p) => (
               <div
                 key={p.id}
-                onClick={() => onSelectProgram(p)}
-                className="bg-white border border-[#E5E0D8] hover:border-[#3B5E43] rounded-[2px] p-7 sm:p-8 shadow-[0_2px_12px_rgba(0,0,0,0.02)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.05)] transition-all duration-200 flex flex-col justify-between cursor-pointer group"
+                className="bg-white border border-[#E5E0D8] rounded-[2px] p-7 sm:p-8 shadow-[0_2px_12px_rgba(0,0,0,0.02)] flex flex-col justify-between"
               >
                 <div>
                   {/* 1. 프로그램명 & 뱃지 (구분선 삭제) */}
                   <div className="mb-4">
-                    <h2 className="text-xl sm:text-[1.3rem] font-bold text-[#1D1D1D] group-hover:text-[#3B5E43] transition-colors flex items-center gap-2 mb-2.5">
+                    <h2 className="text-xl sm:text-[1.3rem] font-bold text-[#1D1D1D] flex items-center gap-2 mb-2.5">
                       <span className="text-xl select-none">{p.emojiIcon}</span>
                       <span>{p.title}</span>
                     </h2>

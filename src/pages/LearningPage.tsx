@@ -1,17 +1,14 @@
-import { PROGRAMS, Program } from '../data/programsData';
-import { ArrowUpRight } from 'lucide-react';
+import { PROGRAMS } from '../data/programsData';
 import RecruitingProgramsSection from '../components/RecruitingProgramsSection';
 import { RecruitingProgram } from '../data/recruitingProgramsData';
 import ScrollReveal from '../components/ScrollReveal';
 
 interface LearningPageProps {
   onApplyOrInquire?: (programTitle: string) => void;
-  onSelectProgram: (p: Program) => void;
   onSelectRecruitingProgram?: (program: RecruitingProgram) => void;
 }
 
 export default function LearningPage({
-  onSelectProgram,
   onSelectRecruitingProgram
 }: LearningPageProps) {
   const learningPrograms = PROGRAMS.filter((p) => p.trackType === 'learning');
@@ -34,19 +31,18 @@ export default function LearningPage({
           </div>
         </ScrollReveal>
 
-        {/* 3-Column Simple Cards */}
+        {/* 3-Column Simple Cards (클릭 반응 및 팝업 없음, 단순 정보 카드) */}
         <ScrollReveal duration={2000}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-7 items-stretch">
             {learningPrograms.map((p) => (
               <div
                 key={p.id}
-                onClick={() => onSelectProgram(p)}
-                className="bg-white border border-[#E5E0D8] hover:border-[#F29938] rounded-[2px] p-7 sm:p-8 shadow-[0_2px_12px_rgba(0,0,0,0.02)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.05)] transition-all duration-200 flex flex-col justify-between cursor-pointer group"
+                className="bg-white border border-[#E5E0D8] rounded-[2px] p-7 sm:p-8 shadow-[0_2px_12px_rgba(0,0,0,0.02)] flex flex-col justify-between"
               >
                 <div>
                   {/* 1. 프로그램명 & 뱃지 (구분선 삭제) */}
                   <div className="mb-4">
-                    <h2 className="text-xl sm:text-[1.3rem] font-bold text-[#1D1D1D] group-hover:text-[#F29938] transition-colors flex items-center gap-2 mb-2.5">
+                    <h2 className="text-xl sm:text-[1.3rem] font-bold text-[#1D1D1D] flex items-center gap-2 mb-2.5">
                       <span className="text-xl select-none">{p.emojiIcon}</span>
                       <span>{p.title}</span>
                     </h2>
@@ -55,7 +51,7 @@ export default function LearningPage({
                     </span>
                   </div>
 
-                  {/* 2. 8. '한 줄 설명' 라벨 칸 삭제, 설명 문구만 노출 */}
+                  {/* 2. '한 줄 설명' 라벨 칸 삭제, 설명 문구만 노출 */}
                   <div className="mb-6">
                     <p className="text-[0.92rem] text-[#333230] leading-relaxed min-h-[3.6rem]">
                       {p.oneLinerSlogan}
@@ -63,7 +59,7 @@ export default function LearningPage({
                   </div>
 
                   {/* 3. 이런 분에게 추천합니다! */}
-                  <div className="mb-6">
+                  <div>
                     <span className="text-[0.75rem] font-bold text-[#F29938] uppercase tracking-wider block mb-2">
                       이런 분에게 추천합니다!
                     </span>
@@ -75,14 +71,6 @@ export default function LearningPage({
                         </li>
                       ))}
                     </ul>
-                  </div>
-                </div>
-
-                {/* 4. 더 알아보기 화살표 버튼 (팝업 오픈) */}
-                <div className="pt-4 border-t border-[#E8E4DA]/80 flex items-center justify-between text-xs font-semibold text-[#1D1D1D] group-hover:text-[#F29938] transition-colors mt-4">
-                  <span>더 알아보기</span>
-                  <div className="w-7 h-7 rounded-full bg-white border border-[#DCD6C8] flex items-center justify-center text-[#84827D] group-hover:bg-[#F29938] group-hover:text-white group-hover:border-[#F29938] transition-all">
-                    <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </div>
                 </div>
               </div>
