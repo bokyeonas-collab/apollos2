@@ -1,6 +1,6 @@
 {
   "name": "아볼로 APOLLO | 기독교 인문학 배움터",
-  "description": "시대의 질문 앞에서 서로의 언어를 배우는 기독교 인문학 커뮤니티 아볼로(APOLLO). 고전 읽기, 1:1 서평 스투디움, 공론장 테이블.",
+  "description": "오늘의 신앙, 오늘의 언어로 - 시대의 질문 앞에서 서로의 언어를 배우다",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

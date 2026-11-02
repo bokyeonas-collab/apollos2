@@ -3,15 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>아볼로 APOLLOS | 기독교 인문학</title>
-    <meta name="description" content="시대의 질문 앞에서 서로의 언어를 배우는 기독교 인문학 커뮤니티 아볼로(APOLLOS). 고전 읽기, 1:1 서평 스투디움, 공론장 테이블." />
     <link rel="icon" type="image/png" href="/assets/aistudio/favicon_b36cafcc.png" />
     <link rel="shortcut icon" href="/assets/aistudio/favicon_b36cafcc.png" />
     <link rel="apple-touch-icon" href="/assets/aistudio/favicon_b36cafcc.png" />
-    <meta property="og:title" content="아볼로 APOLLOS | 기독교 인문학" />
-    <meta property="og:description" content="시대의 질문 앞에서 서로의 언어를 배우는 기독교 인문학 커뮤니티 아볼로(APOLLOS). 고전 읽기, 1:1 서평 스투디움, 공론장 테이블." />
+
+    <!-- Primary Meta Tags -->
+    <title>아볼로 | APOLLOS</title>
+    <meta name="title" content="아볼로 | APOLLOS" />
+    <meta name="description" content="오늘의 신앙, 오늘의 언어로 - 시대의 질문 앞에서 서로의 언어를 배우다" />
+
+    <!-- Open Graph / KakaoTalk / Facebook / Slack / Instagram -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="아볼로 | APOLLOS" />
+    <meta property="og:title" content="아볼로 | APOLLOS" />
+    <meta property="og:description" content="오늘의 신앙, 오늘의 언어로 - 시대의 질문 앞에서 서로의 언어를 배우다" />
+    <meta property="og:url" content="https://theapollos.org" />
+    <!-- KakaoTalk scraper strictly requires absolute URL (https://) -->
+    <meta property="og:image" content="https://theapollos.org/og-image.png" />
+    <meta property="og:image:secure_url" content="https://theapollos.org/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="아볼로 | APOLLOS" />
+
+    <!-- Twitter / X Cards -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="아볼로 | APOLLOS" />
+    <meta name="twitter:description" content="오늘의 신앙, 오늘의 언어로 - 시대의 질문 앞에서 서로의 언어를 배우다" />
+    <meta name="twitter:image" content="https://theapollos.org/og-image.png" />
+
+    <!-- Dynamic Origin Fallback for in-app webviews -->
+    <script>
+      (function() {
+        try {
+          var origin = window.location.origin;
+          if (origin && !origin.includes('localhost')) {
+            var fullOgImg = origin + '/og-image.png';
+            var metaOg = document.querySelector('meta[property="og:image"]');
+            if (metaOg) metaOg.setAttribute('content', fullOgImg);
+            var metaOgSec = document.querySelector('meta[property="og:image:secure_url"]');
+            if (metaOgSec) metaOgSec.setAttribute('content', fullOgImg);
+            var metaTw = document.querySelector('meta[name="twitter:image"]');
+            if (metaTw) metaTw.setAttribute('content', fullOgImg);
+            var metaUrl = document.querySelector('meta[property="og:url"]');
+            if (metaUrl) metaUrl.setAttribute('content', window.location.href);
+          }
+        } catch(e) {}
+      })();
+    </script>
 
     <!-- Typography: Cormorant Garamond (Serif), Caveat (Script), Pretendard (Korean Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
