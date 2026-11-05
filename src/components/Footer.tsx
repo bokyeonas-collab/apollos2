@@ -14,11 +14,11 @@ export default function Footer({}: FooterProps) {
           <div className="font-semibold text-white text-[0.88rem] mb-2 flex items-center flex-wrap gap-2.5">
             <div className="inline-flex items-center gap-1.5">
               <img
-                src="/assets/aistudio/___________2026-10-23______10.44.38_1c86d390.png"
+                src="/images/apollos_symbol.png"
                 alt="아볼로 로고"
                 className="h-4 sm:h-[18px] w-auto object-contain shrink-0 bg-white/95 p-[1px] rounded-[3px]"
                 onError={(e) => {
-                  e.currentTarget.src = '/images/apollos_logo.png';
+                  e.currentTarget.src = '/assets/aistudio/2_833f6a28.png';
                 }}
               />
               <span>아볼로</span>
